@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2 - Gestión Operativa</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            font-family: 'Poppins', sans-serif;
+            padding: 40px 15px;
+            color: #1e293b;
+        }
+
+        .documento{
+            background: #ffffff;
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+        }
+
+        .header{
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1{
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .header .subtitulo{
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .contenido{
+            padding: 40px;
+        }
+
+        .info-card{
+            background: #f8fafc;
+            border-left: 6px solid #2563eb;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 35px;
+        }
+
+        .info-item{
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .info-item strong{
+            color: #1d4ed8;
+        }
+
+        .titulo-seccion{
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .titulo-seccion::after{
+            content: "";
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(to right, #2563eb, #60a5fa);
+            display: block;
+            margin: 12px auto 0;
+            border-radius: 50px;
+        }
+
+        .pregunta-card{
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .pregunta-card:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .pregunta{
+            font-size: 18px;
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 15px;
+        }
+
+        .respuesta{
+            text-align: justify;
+            line-height: 1.9;
+            color: #334155;
+            font-size: 15px;
+        }
+
+        .lista{
+            padding-left: 20px;
+        }
+
+        .lista li{
+            margin-bottom: 12px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .badge-custom{
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 13px;
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .nota{
+            background: #fef9c3;
+            border-left: 5px solid #eab308;
+            padding: 15px;
+            border-radius: 12px;
+            font-style: italic;
+            margin-top: 15px;
+            color: #854d0e;
+        }
+
+        footer{
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media(max-width:768px){
+
+            .header h1{
+                font-size: 22px;
+            }
+
+            .contenido{
+                padding: 25px;
+            }
+
+            .pregunta{
+                font-size: 16px;
+            }
+
+            .titulo-seccion{
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="documento">
+
+        <div class="header">
+            <h1>Instituto Nacional del Puerto de la Libertad</h1>
+
+            <div class="subtitulo">
+                MÓDULO: 2.7 | ACTIVIDAD: 2 | PERIODO: 2 | FASE: GESTIÓN OPERATIVA
+            </div>
+        </div>
+
+        <div class="contenido">
+
+            <div class="info-card">
+                <div class="row">
+                    <div class="col-md-6 info-item">
+                        <strong>NOMBRE DEL NEGOCIO:</strong>
+                        <span class="badge-custom">WebBoost</span>
+                    </div>
+
+                    <div class="col-md-6 info-item">
+                        <strong>GRADO:</strong>
+                        <span class="badge-custom">2TA-DS</span>
+                    </div>
+
+                    <div class="col-md-6 info-item">
+                        <strong>ALUMNO:</strong>
+                        <span class="badge-custom">Allan Andres Valladares Mejía</span>
+                    </div>
+
+ <div class="col-md-6 info-item">
+                        <strong>MAESTRO:</strong>
+                        <span class="badge-custom">René Mauricio</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="titulo-seccion">
+                Desarrollo del Cuestionario
+            </div>
+
+            <!-- Pregunta 1 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    1) ¿Qué es gestión operativa?
+                </div>
+
+                <div class="respuesta">
+                    Es un modelo de gestión compuesto por un conjunto de tareas y procesos enfocados a la mejora de las organizaciones internas, con el fin de aumentar su capacidad para conseguir los propósitos de sus políticas y sus diferentes objetivos operativos.
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    2) ¿Cambios que abarca la gestión operativa son?
+                </div>
+
+                <div class="respuesta">
+                    Abarca cambios no solamente en la estructura de la organización, sino también en el sistema de roles y funciones.
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    3) ¿Cómo influye la gestión operativa?
+                </div>
+
+                <div class="respuesta">
+                    Tiene una notable influencia en cuestiones como la elección de personal directivo y mandos intermedios. Asimismo, influye en los procesos de capacitación del personal, las relaciones entre los circuitos organizativos y la tecnología, así como la introducción de innovaciones técnicas y estratégicas acordes con los proyectos en curso.
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    4) ¿Qué significa análisis de los procesos?
+                </div>
+
+                <div class="respuesta">
+                    Significa la gestión de los procesos técnicos y administrativos de la organización y el estricto cumplimiento de leyes y normativas relacionadas con el proceso de producción de artículos y prestación de servicios.
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    5) Escriba una acción y una estrategia
+                </div>
+
+                <div class="respuesta mb-2">
+                    <strong>Acción:</strong>
+                </div>
+
+                <ul class="lista">
+                    <li>
+                        Conseguir un aumento de la cantidad o la calidad de las actividades en relación con los recursos empleados.
+                    </li>
+                </ul>
+
+                <div class="respuesta mb-2 mt-3">
+                    <strong>Estrategia:</strong>
+                </div>
+
+                <ul class="lista">
+                    <li>
+                        Reducción de los costos fijos y extraordinarios para los niveles actuales de producción.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    6) Escriba dos cuestiones de gestión operativa innovadora
+                </div>
+
+                <ul class="lista">
+                    <li>
+                        Decidir qué productos y servicios ofrecer y qué pautas de actuación llevar a cabo para comercializar y distribuir adecuadamente esos productos.
+                    </li>
+
+                    <li>
+                        Diseñar las operaciones necesarias para producir esos productos o servicios con la mejor calidad posible.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    7) ¿Qué puntos debemos especificar para conseguir las metas?
+                </div>
+
+                <div class="respuesta">
+                    Es muy importante especificar la misión y los objetivos de la organización de forma simple, clara y general. A partir de este punto, se debe delimitar una jerarquía de finalidades y metas.
+                </div>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    8) ¿Cómo debe ser la organización de la empresa?
+                </div>
+
+                <div class="respuesta">
+                    Debe estructurarse delimitando una jerarquía de finalidades y metas que sirvan para orientar y dirigir correctamente las actividades operativas hasta llegar a los parámetros de calidad deseados, además de tener la capacidad de innovar para adaptarse con éxito a los cambios o conflictos del entorno.
+                </div>
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    9) ¿De dónde surge el objetivo operativo?
+                </div>
+
+                <div class="respuesta">
+                    Los objetivos operativos se derivan directamente de los objetivos tácticos.
+                </div>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div class="pregunta-card">
+                <div class="pregunta">
+                    10) Escriba cinco propósitos políticos de la gestión operativa
+                </div>
+
+                <div class="nota">
+                    Basado en las metas, enfoques y directrices de mejora que dicta el texto para cumplir las políticas de la organización.
+                </div>
+
+                <ul class="lista mt-4">
+                    <li>
+                        Aumentar la capacidad de las organizaciones internas para conseguir de forma eficiente los propósitos de sus políticas.
+                    </li>
+
+                    <li>
+                        Lograr un incremento de la cantidad o la calidad de las actividades en relación con los recursos tecnológicos, personales y de infraestructura empleados.
+                    </li>
+
+                    <li>
+                        Efectuar la reducción de los costos fijos y extraordinarios para optimizar los niveles actuales de producción.
+                    </li>
+
+                    <li>
+                        Garantizar una mejor identificación y respuesta inmediata a las exigencias y expectativas de los clientes.
+                    </li>
+
+                    <li>
+                        Realizar los cometidos institucionales y actividades de la organización con la mayor imparcialidad posible.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <footer>
+            Documento académico | Gestión Operativa | WebBoost
+        </footer>
+
+    </div>
+
+</body>
+</html>
